@@ -210,6 +210,7 @@ def ensure_jupyterhub_package(prefix):
         'jupyterhub-ldapauthenticator==1.2.2',
         'jupyterhub-tmpauthenticator==0.6',
         'oauthenticator==0.8.2',
+		'dockerspawner==0.11.1'
     ])
     traefik.ensure_traefik_binary(prefix)
 

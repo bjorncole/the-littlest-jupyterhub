@@ -44,7 +44,9 @@ class UserCreatingSpawner(SystemdSpawner):
                     user.ensure_user_group(system_username, group)
         return super().start()
 
-c.JupyterHub.spawner_class = UserCreatingSpawner
+#c.JupyterHub.spawner_class = UserCreatingSpawner
+
+c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
 
 # leave users running when the Hub restarts
 c.JupyterHub.cleanup_servers = False
