@@ -7,6 +7,7 @@ import os
 import pluggy
 
 from systemdspawner import SystemdSpawner
+from dockerspawner import DockerSpawner
 from tljh import configurer, user, hooks
 from tljh.config import INSTALL_PREFIX, USER_ENV_PREFIX, CONFIG_DIR
 from tljh.normalize import generate_system_username
@@ -46,7 +47,9 @@ class UserCreatingSpawner(SystemdSpawner):
 
 #c.JupyterHub.spawner_class = UserCreatingSpawner
 
-c.JupyterHub.spawner_class = 'dockerspawner.DockerSpawner'
+c.JupyterHub.spawner_class = DockerSpawner
+
+c.DockerSpawner.image = 'jupyter/scipy-notebook:8f56e3c47fec'
 
 # leave users running when the Hub restarts
 c.JupyterHub.cleanup_servers = False
@@ -60,10 +63,10 @@ dynamic_conf_file_path = os.path.join(INSTALL_PREFIX, 'state', 'rules.toml')
 c.TraefikTomlProxy.toml_dynamic_config_file = dynamic_conf_file_path
 c.JupyterHub.proxy_class = TraefikTomlProxy
 
-c.SystemdSpawner.extra_paths = [os.path.join(USER_ENV_PREFIX, 'bin')]
-c.SystemdSpawner.default_shell = '/bin/bash'
+#c.SystemdSpawner.extra_paths = [os.path.join(USER_ENV_PREFIX, 'bin')]
+#c.SystemdSpawner.default_shell = '/bin/bash'
 # Drop the '-singleuser' suffix present in the default template
-c.SystemdSpawner.unit_name_template = 'jupyter-{USERNAME}'
+#c.SystemdSpawner.unit_name_template = 'jupyter-{USERNAME}'
 
 tljh_config = configurer.load_config()
 configurer.apply_config(tljh_config, c)
