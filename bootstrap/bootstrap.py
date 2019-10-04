@@ -138,7 +138,7 @@ def main():
         logger.info('Installed python & virtual environment')
         os.makedirs(hub_prefix, exist_ok=True)
         run_subprocess(['python3', '-m', 'venv', hub_prefix])
-        logger.info('Set up hub virtual environment')
+        logger.info('Set up hub virtual environment under ' + hub_prefix)
 
     if initial_setup:
         logger.info('Setting up TLJH installer...')
