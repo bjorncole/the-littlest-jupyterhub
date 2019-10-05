@@ -236,7 +236,7 @@ def ensure_user_environment(user_requirements_txt_file):
     """
     Set up user conda environment with required packages
     """
-    logger.info("Setting up user environment...")
+    logger.info("Setting up user environment as with reqs file = " + user_requirements_txt_file)
     miniconda_version = '4.5.4'
     miniconda_installer_md5 = "a946ea1d0c4a642ddf0c3a26a18bb16d"
 
@@ -438,6 +438,8 @@ def ensure_config_yaml(plugin_manager):
 def main():
     from .log import init_logging
     init_logging()
+	
+	logger.info("Started TLJH Installer.")
 
     argparser = argparse.ArgumentParser()
     argparser.add_argument(
