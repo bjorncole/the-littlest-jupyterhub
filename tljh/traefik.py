@@ -55,7 +55,7 @@ def ensure_traefik_binary(prefix):
         "https://github.com/containous/traefik/releases"
         f"/download/v{traefik_version}/traefik_{plat}"
     )
-    print(f"Downloading traefik {traefik_version}...")
+    #print(f"Downloading traefik {traefik_version}...")
     # download the file
     response = requests.get(traefik_url)
     if response.status_code == 206:
