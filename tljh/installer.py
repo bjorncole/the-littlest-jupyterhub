@@ -440,7 +440,7 @@ def ensure_config_yaml(plugin_manager):
 def main():
     from .log import init_logging
     init_logging()
-    logger.info("Started TLJH Installer.")
+    logger.info("Started TLJH Installer...")
     argparser = argparse.ArgumentParser()
     argparser.add_argument(
         '--admin',
@@ -469,17 +469,17 @@ def main():
 
     logger.info("Setting up JupyterHub...")
     ensure_node()
-    logger.info("Node ensured.")
+    logger.info("Node ensured...")
     ensure_jupyterhub_package(HUB_ENV_PREFIX)
-    logger.info("Package ensured.")
+    logger.info("Package ensured...")
     ensure_jupyterlab_extensions()
-    logger.info("Extensions ensured.")
+    logger.info("Extensions ensured...")
     ensure_jupyterhub_service(HUB_ENV_PREFIX)
-    logger.info("Service ensured.")
+    logger.info("Service ensured...")
     ensure_jupyterhub_running()
-    logger.info("JupyterHub is running.")
+    logger.info("JupyterHub is running...")
     ensure_symlinks(HUB_ENV_PREFIX)
-    logger.info("Symlinks ensured.")
+    logger.info("Symlinks ensured...")
 
     # Run installer plugins last
     run_plugin_actions(pm, args.plugin)
