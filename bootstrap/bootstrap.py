@@ -110,7 +110,7 @@ def main():
     stderr_logger.setFormatter(logging.Formatter('%(message)s'))
     stderr_logger.setLevel(logging.INFO)
     logger.addHandler(stderr_logger)
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.INFO)
 
     logger.info('Checking if TLJH is already installed...')
     if os.path.exists(os.path.join(hub_prefix, 'bin', 'python3')):
