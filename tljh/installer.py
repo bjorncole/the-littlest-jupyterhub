@@ -36,7 +36,7 @@ from .yaml import yaml
 
 HERE = os.path.abspath(os.path.dirname(__file__))
 
-#logger = logging.getLogger("tljh")
+logger = logging.getLogger("tljh")
 
 #logger.info('Established connection to TLJH logger')
 
