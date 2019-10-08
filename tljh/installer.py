@@ -439,7 +439,7 @@ def main():
     from .log import init_logging
     init_logging()
 	
-	logger.info("Started TLJH Installer.")
+    logger.info("Started TLJH Installer.")
 
     argparser = argparse.ArgumentParser()
     argparser.add_argument(
