@@ -103,7 +103,7 @@ def main():
     os.chmod(file_logger_path, 0o500)
 
     file_logger.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
-    file_logger.setLevel(logging.DEBUG)
+    file_logger.setLevel(logging.INFO)
     logger.addHandler(file_logger)
 
     stderr_logger = logging.StreamHandler()
