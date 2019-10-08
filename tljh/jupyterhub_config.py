@@ -49,7 +49,7 @@ class UserCreatingSpawner(SystemdSpawner):
 
 c.JupyterHub.spawner_class = DockerSpawner
 
-c.DockerSpawner.image = 'jupyter/scipy-notebook:8f56e3c47fec'
+c.DockerSpawner.image = 'jupyter/scipy-notebook'
 
 # leave users running when the Hub restarts
 c.JupyterHub.cleanup_servers = False
