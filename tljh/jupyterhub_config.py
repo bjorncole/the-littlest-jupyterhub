@@ -51,7 +51,7 @@ c.JupyterHub.spawner_class = DockerSpawner
 
 c.DockerSpawner.image = 'jupyter/scipy-notebook'
 
-c.DockerSpawner.host_ip = '172.17.0.1'
+c.DockerSpawner.host_ip = '172.17.0.2'
 
 # leave users running when the Hub restarts
 c.JupyterHub.cleanup_servers = False
