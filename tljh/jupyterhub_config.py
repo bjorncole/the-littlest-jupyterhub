@@ -62,7 +62,7 @@ c.JupyterHub.hub_port = 15001
 
 #c.JupyterHub.hub_connect_ip = '0.0.0.0'
 
-#c.JupyterHub.hub_ip = '0.0.0.0'
+c.JupyterHub.hub_ip = '192.168.33.15'
 
 c.TraefikTomlProxy.should_start = False
 
