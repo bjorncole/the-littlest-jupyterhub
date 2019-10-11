@@ -60,6 +60,8 @@ c.JupyterHub.cleanup_servers = False
 # Use a high port so users can try this on machines with a JupyterHub already present
 c.JupyterHub.hub_port = 15001
 
+c.JupyterHub.hub_connect_ip = '172.17.0.2'
+
 #c.JupyterHub.hub_ip = '0.0.0.0'
 
 c.TraefikTomlProxy.should_start = False
