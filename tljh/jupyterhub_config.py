@@ -51,7 +51,7 @@ c.JupyterHub.spawner_class = DockerSpawner
 
 c.DockerSpawner.image = 'jupyter/scipy-notebook'
 
-c.DockerSpawner.host_ip = '172.17.0.2'
+#c.DockerSpawner.host_ip = '172.17.0.2'
 
 # leave users running when the Hub restarts
 c.JupyterHub.cleanup_servers = False
@@ -59,7 +59,7 @@ c.JupyterHub.cleanup_servers = False
 # Use a high port so users can try this on machines with a JupyterHub already present
 c.JupyterHub.hub_port = 15001
 
-c.JupyterHub.hub_ip = '0.0.0.0'
+#c.JupyterHub.hub_ip = '0.0.0.0'
 
 c.TraefikTomlProxy.should_start = False
 
