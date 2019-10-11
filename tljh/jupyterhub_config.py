@@ -49,7 +49,8 @@ class UserCreatingSpawner(SystemdSpawner):
 
 c.JupyterHub.spawner_class = DockerSpawner
 
-c.DockerSpawner.image = 'jupyter/scipy-notebook'
+# smaller notebook - use scipy-notebook when feeling more spunky
+c.DockerSpawner.image = 'jupyter/base-notebook'
 
 #c.DockerSpawner.host_ip = '172.17.0.2'
 
