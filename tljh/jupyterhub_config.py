@@ -49,6 +49,8 @@ class UserCreatingSpawner(SystemdSpawner):
 
 c.JupyterHub.spawner_class = DockerSpawner
 
+c.JupyterHub.log_level = 'INFO'
+
 # smaller notebook - use scipy-notebook when feeling more spunky
 c.DockerSpawner.image = 'jupyter/base-notebook'
 
@@ -60,7 +62,7 @@ c.JupyterHub.cleanup_servers = False
 # Use a high port so users can try this on machines with a JupyterHub already present
 c.JupyterHub.hub_port = 15001
 
-#c.JupyterHub.hub_connect_url = 'http://172.17.0.1:80'
+c.JupyterHub.hub_connect_url = 'http://172.17.0.1:80'
 
 #c.JupyterHub.hub_ip = '172.17.0.1'
 
