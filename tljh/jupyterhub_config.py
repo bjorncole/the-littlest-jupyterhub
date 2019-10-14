@@ -60,7 +60,7 @@ c.JupyterHub.cleanup_servers = False
 # Use a high port so users can try this on machines with a JupyterHub already present
 c.JupyterHub.hub_port = 15001
 
-c.JupyterHub.hub_connect_url = 'http://172.17.0.1:80'
+#c.JupyterHub.hub_connect_url = 'http://172.17.0.1:80'
 
 #c.JupyterHub.hub_ip = '172.17.0.1'
 
