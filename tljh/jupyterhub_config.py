@@ -51,10 +51,12 @@ c.JupyterHub.spawner_class = DockerSpawner
 
 c.JupyterHub.log_level = 'DEBUG'
 
+c.DockerSpawner.debug = True
+
 # smaller notebook - use scipy-notebook when feeling more spunky
 c.DockerSpawner.image = 'jupyter/base-notebook'
 
-c.DockerSpawner.environment['JUPYTERHUB_API_URL'] = 'http://172.17.0.1:80'
+#c.DockerSpawner.environment.update({'JUPYTERHUB_API_URL': 'http://172.17.0.1:80'})
 
 #c.DockerSpawner.host_ip = '172.17.0.2'
 
