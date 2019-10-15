@@ -54,6 +54,8 @@ c.JupyterHub.log_level = 'DEBUG'
 # smaller notebook - use scipy-notebook when feeling more spunky
 c.DockerSpawner.image = 'jupyter/base-notebook'
 
+c.DockerSpawner.environment['JUPYTERHUB_API_URL'] = 'http://172.17.0.1:80'
+
 #c.DockerSpawner.host_ip = '172.17.0.2'
 
 # leave users running when the Hub restarts
@@ -62,7 +64,7 @@ c.JupyterHub.cleanup_servers = False
 # Use a high port so users can try this on machines with a JupyterHub already present
 c.JupyterHub.hub_port = 15001
 
-c.JupyterHub.bind_url = 'http://172.17.0.1:80'
+#c.JupyterHub.hub_bind_url = 'http://172.17.0.1:80'
 
 #c.JupyterHub.hub_connect_url = 'http://172.17.0.1:80'
 
