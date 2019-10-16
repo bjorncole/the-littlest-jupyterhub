@@ -476,8 +476,8 @@ def main():
     logger.info("Extensions ensured...")
     ensure_jupyterhub_service(HUB_ENV_PREFIX)
     logger.info("Service ensured...")
-    ensure_jupyterhub_running()
-    logger.info("JupyterHub is running...")
+    #ensure_jupyterhub_running()
+    #logger.info("JupyterHub is running...")
     ensure_symlinks(HUB_ENV_PREFIX)
     logger.info("Symlinks ensured...")
 
